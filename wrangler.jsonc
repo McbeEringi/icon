@@ -1,0 +1,24 @@
+{
+	"$schema":"node_modules/wrangler/config-schema.json",
+	"name":"icon",
+	"compatibility_date":"2026-04-30",
+	"build":{
+		"command":"bun build.mjs",
+		"watch_dir":["src","build.mjs"]
+	},
+	"routes": [
+		{
+			"pattern": "6ca.me/img/icon.*",
+			"zone_id":"6ca.me"
+		},
+		{
+			"pattern": "www.6ca.me/img/icon.*",
+			"zone_id":"6ca.me"
+		}
+	],
+
+	"assets":{
+		"directory":"./dst",
+		"not_found_handling":"404-page"
+	}
+}
