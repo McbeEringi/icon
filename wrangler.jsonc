@@ -8,12 +8,12 @@
 	},
 	"routes": [
 		{
-			"pattern": "6ca.me/img/icon.*",
-			"zone_id":"6ca.me"
+			"pattern": "6ca.me/img/icon*",
+			"zone_name":"6ca.me"
 		},
 		{
-			"pattern": "www.6ca.me/img/icon.*",
-			"zone_id":"6ca.me"
+			"pattern": "www.6ca.me/img/icon*",
+			"zone_name":"6ca.me"
 		}
 	],
 
