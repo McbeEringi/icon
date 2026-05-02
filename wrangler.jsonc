@@ -8,9 +8,7 @@
 	},
 	"routes": [
 		{"pattern":"6ca.me/img/icon*","zone_name":"6ca.me"},
-		{"pattern":"www.6ca.me/img/icon*","zone_name":"6ca.me"},
 		{"pattern":"mcbeeringi.dev/img/icon*","zone_name":"mcbeeringi.dev"},
-		{"pattern":"www.mcbeeringi.dev/img/icon*","zone_name":"mcbeeringi.dev"}
 	],
 
 	"assets":{
