@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 64">
 	<defs>
 		<style>
 			.f,.s{stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1;}
 			.f{stroke-width:0;opacity:.5;}
-			:root{dominant-baseline:hanging;font-size:8px;}
-			a{text-decoration:underline;fill:#00f;}
+			a{dominant-baseline:hanging;font-size:8px;text-decoration:underline;fill:#00f;}
 		</style>
 		<path id="_bg" fill="#fff" d="M0,0v64h64v-64z"/>
 		<g id="_icon">
@@ -18,35 +17,31 @@
 			<path fill="#888" class="f" d="M54,24c0-7-23,0-23,0"/>
 			<path fill="none" class="s" d="M9,35c-17-3,5-10,23-11s39,0,24,6m-48-2c1-26,44-25,46-4m-45,0c0,0,14-7,44-4"/>
 		</g>
-		<g id="_lease">
-			<path fill="none" class="s" d="M0,24h64"/>
-		</g>
-		<g id="_ear"></g>
+		<!-- <g id="_lease"> -->
+		<!-- 	<path fill="none" class="s" d="M4,24h56"/> -->
+		<!-- </g> -->
+		<!-- <g id="_ear"></g> -->
 	</defs>
-	<g>
+	<view id="default" viewBox="0 0 64 64"/>
+	<g transform="translate(0 0)"><a href="#default">
+		<use href="#_bg"/><use href="#_icon"/>
+	</a></g>
+	<view id="hat" viewBox="64 0 64 64"/>
+	<g transform="translate(64 0)"><a href="#hat">
 		<use href="#_bg"/>
-		<a href="#default"><text>default</text></a>
-		<a href="#hat"><text y="8">hat</text></a>
-		<!-- <a href="#lease"><text y="16">lease</text></a> -->
-		<!-- <a href="#ear"><text y="16">ear</text></a> -->
-	</g>
-	<view id="default" viewBox="64 0 64 64"/>
-	<g transform="translate(64 0)">
-		<use href="#_bg"/><use href="#_icon"/>
-	</g>
-	<view id="hat" viewBox="128 0 64 64"/>
-	<g transform="translate(128 0)">
-		<use href="#_bg"/><use href="#_icon" clip-path="url(#_hat-clip)"/>
+		<use href="#_icon" clip-path="url(#_hat-clip)"/>
 		<use href="#_hat"/>
-	</g>
-	<view id="lease" viewBox="192 0 64 64"/>
-	<g transform="translate(192 0)">
-		<use href="#_bg"/><use href="#_icon"/>
-		<use href="#_lease"/>
-	</g>
-	<view id="ear" viewBox="256 0 64 64"/>
-	<g transform="translate(256 0)">
-		<use href="#_bg"/><use href="#_icon"/>
-		<use href="#_ear"/>
-	</g>
+	</a></g>
+	<!-- <view id="lease" viewBox="128 0 64 64"/> -->
+	<!-- <g transform="translate(128 0)"><a href="#lease"> -->
+	<!-- 	<use href="#_bg"/> -->
+	<!-- 	<use href="#_icon"/> -->
+	<!-- 	<use href="#_lease"/> -->
+	<!-- </a></g> -->
+	<!-- <view id="ear" viewBox="192 0 64 64"/> -->
+	<!-- <g transform="translate(192 0)"><a href="#ear"> -->
+	<!-- 	<use href="#_bg"/> -->
+	<!-- 	<use href="#_icon"/> -->
+	<!-- 	<use href="#_ear"/> -->
+	<!-- </a></g> -->
 </svg>
