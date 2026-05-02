@@ -12,9 +12,5 @@
 		{"pattern":"www.6ca.me/img/icon*","zone_name":"6ca.me"},
 		{"pattern":"www.mcbeeringi.dev/img/icon*","zone_name":"mcbeeringi.dev"}
 	],
-
-	"assets":{
-		"directory":"./dst",
-		"not_found_handling":"404-page"
-	}
+	"assets":{"directory":"./dst"}
 }
