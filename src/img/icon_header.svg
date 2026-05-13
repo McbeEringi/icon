@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="576" viewBox="0 0 64 36">
+	<def>
+		<style>
+			#s{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:76 76;animation:anm 1s ease-in-out;}
+			@keyframes anm{0%{stroke-dashoffset:76;}100%{stroke-dashoffset:0;}}
+		</style>
+		<path id="s" d="M20,15c-8,1-8-3-8-3-1,5,2,7,1,9-2,4-5,2-5,2,15-15,13,8,48-3"/>
+		<rect id="p" width="2" height="2" rx=".5" ry=".5" transform="translate(-1,-1)"/>
+		<g id="d" stroke-width=".5">
+			<g stroke="#6be">
+				<use href="#s"/>
+				<use href="#p" x="12" y="12"/>
+				<use href="#p" x="13" y="21"/>
+				<use href="#p" x="8" y="23"/>
+			</g>
+			<use href="#p" x="20" y="15" stroke="#e9b"/>
+			<use href="#p" x="56" y="20" stroke="#6ca"/>
+		</g>
+	</def>
+
+	<!-- default goes here --><view id="_" viewBox="64 0 64 36"/>
+	<view id="e" viewBox="0 36 64 36"/><view id="e_" viewBox="64 36 64 36"/>
+	<view id="!" viewBox="0 72 64 36"/><view id="!_" viewBox="64 72 64 36"/>
+	<view id="e!" viewBox="0 108 64 36"/><view id="e!_" viewBox="64 108 64 36"/>
+	<view id="$" viewBox="0 0 128 144"/>
+
+	<path d="M0,0v72h64v-72z" fill="#fff"/>
+	<path d="M0,72v72h64v-72z" fill="#222"/>
+	<g stroke-width="2">
+		<g stroke="#000">
+			<use href="#s"/>
+			<use href="#s" x="64"/>
+		</g>
+		<g stroke="#fff">
+			<use href="#s" y="72"/>
+			<use href="#s" x="64" y="72"/>
+		</g>
+	</g>
+	<g fill="#fff">
+		<use href="#d" y="36"/>
+		<use href="#d" x="64" y="36"/>
+	</g>
+	<g fill="none">
+		<use href="#d" y="108"/>
+		<use href="#d" x="64" y="108"/>
+	</g>
+</svg>
