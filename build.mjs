@@ -2,7 +2,7 @@
 import{renderAsync}from'@resvg/resvg-js';
 
 await Bun.$`rm -rf dst`;
-await Bun.$`cp -r src dst`;
+await Bun.$`cp -R src dst`;
 
 const
 path='dst/img/icon',
