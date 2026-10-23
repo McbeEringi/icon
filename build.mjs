@@ -1,4 +1,4 @@
-#!/usr/bin/env -S bun --install=force
+#!/usr/bin/env -S bun
 import{renderAsync}from'@resvg/resvg-js';
 
 await Bun.$`rm -rf dst`;

@@ -6,9 +6,13 @@
 		"command":"bun build.mjs",
 		"watch_dir":["src","build.mjs"]
 	},
+	"main":"./index.mjs",
 	"routes": [
 		{"pattern":"6ca.me/img/icon*","zone_name":"6ca.me"},
 		{"pattern":"www.6ca.me/img/icon*","zone_name":"6ca.me"}
 	],
-	"assets":{"directory":"./dst"}
+	"assets":{
+		"directory":"./dst",
+		"binding":"ASSETS"
+	}
 }
