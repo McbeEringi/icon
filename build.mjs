@@ -41,7 +41,7 @@ png=async({fg=0x000000ff,bg=0xffffffff}={})=>(
 );
 
 
-	await Promise.all(Object.entries({
+await Promise.all(Object.entries({
 	'!':await png({fg:0xffffffff,bg:0x222222ff}),
 	'_':await png({bg:0}),
 	'!_':await png({fg:0xffffffff,bg:0}),
