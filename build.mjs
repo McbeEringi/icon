@@ -1,5 +1,5 @@
 #!/usr/bin/env -S bun
-import{renderAsync}from'@resvg/resvg-js';
+// import{renderAsync}from'@resvg/resvg-js';
 
 await Bun.$`rm -rf dst`;
 await Bun.$`cp -R src dst`;
@@ -40,28 +40,32 @@ png=async({fg=0x000000ff,bg=0xffffffff}={})=>(
 	)),{type:'image/png'})
 );
 
-await Bun.write(path+'!.png',await png({fg:0xffffffff,bg:0x222222ff}));
-await Bun.write(path+'_.png',await png({bg:0}));
-await Bun.write(path+'!_.png',await png({fg:0xffffffff,bg:0}));
+
+	await Promise.all(Object.entries({
+	'!':await png({fg:0xffffffff,bg:0x222222ff}),
+	'_':await png({bg:0}),
+	'!_':await png({fg:0xffffffff,bg:0}),
+}).map(async([i,x])=>(
+	await Bun.write(`${path+i}.png`,x)
+	// new Bun.Image(x)
+)))
 
 
+// const
+// vari=await Bun.file(path+'_var.svg').text();
 
-
-const
-vari=await Bun.file(path+'_var.svg').text();
-
-await vari.matchAll(/(?<!<!--\s*)<view id="(?<i>.*?)" viewBox="(?<v>.*?)"\/>/g)
-	.map(x=>x.groups)
-	.filter(x=>x.i!='default')
-	.reduce(async(a,{i,v})=>(
-		await a,v=v.split(' ').map(x=>+x*16),
-		await Bun.write(
-			`${path}_${i}.png`,
-			(await renderAsync(vari,{
-				font:{loadSystemFonts:false},
-				fitTo:{mode:'height',value:64*16},
-				crop:{left:v[0],top:v[1],right:v[0]+v[2],bottom:v[1]+v[3]}
-			})).asPng()
-		)
-	),0);
+// await vari.matchAll(/(?<!<!--\s*)<view id="(?<i>.*?)" viewBox="(?<v>.*?)"\/>/g)
+// 	.map(x=>x.groups)
+// 	.filter(x=>x.i!='default')
+// 	.reduce(async(a,{i,v})=>(
+// 		await a,v=v.split(' ').map(x=>+x*16),
+// 		await Bun.write(
+// 			`${path}_${i}.png`,
+// 			(await renderAsync(vari,{
+// 				font:{loadSystemFonts:false},
+// 				fitTo:{mode:'height',value:64*16},
+// 				crop:{left:v[0],top:v[1],right:v[0]+v[2],bottom:v[1]+v[3]}
+// 			})).asPng()
+// 		)
+// 	),0);
 

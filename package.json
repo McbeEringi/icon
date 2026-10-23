@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@resvg/resvg-js": "^2.6.2",
     "cf-worker-resvg": "git+https://github.com/mcbeeringi/cf-worker-resvg.git"
   }
 }
